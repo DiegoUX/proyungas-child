@@ -1,0 +1,81 @@
+html {
+    font-size: 100% !important;
+}
+
+html,body,p,input,span,div,button{
+    font-family: $src;
+}
+
+h1,h2,h3,h4,h5,h6, nav[role="navigation"] > ul
+{
+    font-family: $osw !important;
+}
+
+.wrapper {
+    margin: 0 !important;
+    max-width: 100% !important;
+    position: relative !important;
+    width: 100% !important;
+	background-color: #F5F4F2;
+
+}
+
+input[type="search"] {
+    box-sizing: border-box;
+}
+
+nav[role="navigation"] > ul > li {
+    display: inline-block;
+}
+
+form.search{
+	input, button {
+	    display: inline-block;
+	    margin-bottom: 0;
+	    vertical-align: middle;
+	    
+	}
+	input{
+		width: 49%;
+		min-width: 100px;
+	}
+	button{
+		// width: 19%;
+	}
+}
+
+input[type="search"] {
+    border-radius: 4px;
+    box-sizing: border-box !important;
+    color: #000 !important;
+    font-size: 1.1em !important;
+    height: 2.4em !important;
+    padding: 0.2em 0.9em !important;
+
+}
+
+button.search-submit, header nav.nav-2dary[role="navigation"] > ul > li:last-child > a {
+    background: none repeat scroll 0 0 $orange-button;
+    border: 1px solid #d48f04;
+    border-radius: 4px;
+    box-sizing: border-box !important;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1em;
+    text-transform: uppercase;
+
+    &:hover{
+        background: $orange-button-hover;
+    }
+}
+button.search-submit{
+    height: 32px !important;
+    padding: 5px 8px;
+    
+
+}
+
+header nav.nav-2dary[role="navigation"] > ul > li:last-child > a {
+    padding: 3px 8px;
+    margin-right: 0px!important;
+}

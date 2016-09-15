@@ -1,0 +1,28 @@
+@media only screen and (max-width: 860px){
+	body header .full-width nav.nav[role="navigation"] > ul > li > a{
+		font-size: 0.75em;
+	}
+}
+
+@media only screen and (max-width: 40em){
+	.seguinos{
+		h3{
+			display: none!important;
+
+		}
+
+		a.social-footer-link {
+		    margin: 0 5%;
+		}
+	}
+}
+
+@media only screen and (min-width: 40.063em){
+	.seguinos{
+		a.social-footer-link {
+		    margin-left: 15px;
+		}
+		
+	}
+
+}
