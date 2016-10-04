@@ -55,7 +55,7 @@
 			$grid_size = 4;
 			$i=0;
 			$args_grilla_home = array(
-				'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'pasante',
+				'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'pasante',
 				'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 				'posts_per_page' => '1000'
 			);

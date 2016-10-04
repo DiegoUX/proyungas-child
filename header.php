@@ -2,6 +2,9 @@
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
+			<?php if ( isset( $_GET["custom"] ) && $_GET["custom"] == "publication" ): ?>
+				<title>Publicaciones : Proyungas</title>	
+			<?php endif ?>
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">

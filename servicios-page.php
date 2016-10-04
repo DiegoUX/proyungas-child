@@ -48,28 +48,7 @@
 							</div>
 						<?php endwhile; ?>
 					<?php wp_reset_query(); ?>
-					<!-- <div class="special-services-boxes">
-						<div>
-							<h3>Regalos Empresariales Comprometidos</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, autem, necessitatibus quasi quia esse temporibus ullam sapiente dignissimos expedita doloribus rerum animi vel praesentium perferendis voluptate accusantium illum a voluptatem?</p>
-							<div class="servicio-name-contact">
-								Fernanda Giannini
-							</div>
-							<div class="servicio-mail-contact">
-								<a href="mailto:fgiannini@proyungas.org.ar">fgiannini@proyungas.org.ar</a>
-							</div>
-						</div>
-						<div>
-							<h3>Regalos Empresariales Comprometidos</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, autem, necessitatibus quasi quia esse temporibus ullam sapiente dignissimos expedita doloribus rerum animi vel praesentium perferendis voluptate accusantium illum a voluptatem?</p>
-							<div class="servicio-name-contact">
-								Fernanda Giannini
-							</div>
-							<div class="servicio-mail-contact">
-								<a href="mailto:fgiannini@proyungas.org.ar">fgiannini@proyungas.org.ar</a>
-							</div>
-						</div>
-					</div> -->
+					
 					<?php the_content(); ?>
 				</div> 
 				<!-- end medium 7 -->

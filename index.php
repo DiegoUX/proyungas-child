@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<?php if( $_GET["custom"] == "grafico" ): ?>
+	<?php if( isset($_GET["custom"]) && $_GET["custom"] == "grafico" ): ?>
 		<?php remove_filter( 'the_content', 'wpautop' ); ?>
 
 		<main role="main">
@@ -229,7 +229,7 @@
 			});
 		</script>
 	<!-- end del if custom == grafico -->
-	<?php elseif( $_GET["custom"] == "publication" ): ?>
+	<?php elseif( isset($_GET["custom"]) && $_GET["custom"] == "publication" ): ?>
 		<main role="main">
 		<!-- section -->
 
@@ -250,7 +250,7 @@
 							$args_grilla_home = array(
 								'post_type' => 'publication',
 								'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-								'posts_per_page' => '2'
+								'posts_per_page' => '20'
 							);
 							$nuevo_query = new WP_query( $args_grilla_home );
 							while ($nuevo_query->have_posts()) : $nuevo_query->the_post();
@@ -298,8 +298,8 @@
 										<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Descargar PDF</a>";
 										?>
 									<?php endif ?>
-									<?php if (get_post_meta(get_the_ID(), 'pdf-url' , true)): ?>
-										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver Lamina</a>";
+									<?php if (get_post_meta(get_the_ID(), 'ver-lamina' , true)): ?>
+										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'ver-lamina' , true) ."'>Ver Lámina</a>";
 										?>	
 									<?php endif ?>
 									
@@ -317,6 +317,7 @@
 								
 							</div>
 						<?php endwhile; ?>
+						 
 						<?php wp_reset_query(); ?>
 						<?php get_template_part('pagination'); ?>
 						<!-- <?php wp_pagenavi(); ?> -->
@@ -362,8 +363,8 @@
 												<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Descargar PDF</a>";
 												?>
 											<?php endif ?>
-											<?php if (get_post_meta(get_the_ID(), 'pdf-url' , true)): ?>
-												<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver Lamina</a>";
+											<?php if (get_post_meta(get_the_ID(), 'ver-lamina' , true)): ?>
+												<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'ver-lamina' , true) ."'>Ver Lámina</a>";
 												?>	
 											<?php endif ?>
 											
@@ -453,8 +454,8 @@
 										<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver CV</a>";
 										?>
 									<?php endif ?>
-									<?php if (get_post_meta(get_the_ID(), 'pdf-url' , true)): ?>
-										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver Lamina</a>";
+									<?php if (get_post_meta(get_the_ID(), 'ver-lamina' , true)): ?>
+										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'ver-lamina' , true) ."'>Ver Lámina</a>";
 										?>	
 									<?php endif ?>
 									
@@ -537,7 +538,7 @@
 
 <?php // get_sidebar(); ?>
 
-<?php if( $_GET["custom"] ): ?>
+<?php if( isset($_GET["custom"] )): ?>
  	<script>
  		jQuery(function(){
  			jQuery("body").addClass("no-noticias");

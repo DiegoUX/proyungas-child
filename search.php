@@ -63,11 +63,11 @@
 								</div>
 								<div class="ver-cv-dir buttons">
 									<?php if ( get_post_meta(get_the_ID(), 'pdf-url' , true) ): ?>
-										<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver CV</a>";
+										<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Descargar PDF</a>";
 										?>
 									<?php endif ?>
-									<?php if (get_post_meta(get_the_ID(), 'pdf-url' , true)): ?>
-										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver Lamina</a>";
+									<?php if (get_post_meta(get_the_ID(), 'ver-lamina' , true)): ?>
+										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'ver-lamina' , true) ."'>Ver Lámina</a>";
 										?>	
 									<?php endif ?>
 									

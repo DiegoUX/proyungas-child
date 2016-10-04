@@ -59,7 +59,7 @@
 					$i=0;
 					$cat_name = 'coordinacion';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -166,7 +166,7 @@
 					$i=0;
 					$cat_name = 'asesor';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -272,7 +272,7 @@
 					$i=0;
 					$cat_name = 'administrativa';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -379,7 +379,7 @@
 					$i=0;
 					$cat_name = 'fortalecimiento';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -485,7 +485,7 @@
 					$i=0;
 					$cat_name = 'planificacion';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -591,7 +591,7 @@
 					$i=0;
 					$cat_name = 'sustentables';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -697,7 +697,7 @@
 					$i=0;
 					$cat_name = 'gestionforestal';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name
@@ -803,7 +803,7 @@
 					$i=0;
 					$cat_name = 'investigacion';
 					$args_grilla_home = array(
-						'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'team_member',
+						'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'team_member',
 						'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 						'posts_per_page' => '1000',
 						'category_name' => $cat_name

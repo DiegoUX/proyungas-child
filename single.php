@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php // remove_filter( 'the_content', 'wpautop' ); ?>
-	<?php if ( $_GET["proyect"] ): ?>
+	<?php if( isset( $_GET["proyect"] )): ?>
 
 		<main role="main">
 			<!-- section -->
@@ -58,7 +58,7 @@
 				sel.addClass("current-menu-item");
 			});
 		</script>		
-	<?php elseif( $_GET["publication"] ): ?>
+	<?php elseif( isset( $_GET["publication"] )): ?>
 	<?php else: ?>
 		<main role="main">
 			<section class="loop-header">

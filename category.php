@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	
-	<?php if( $_GET["custom"] == "proyect" ): ?>
+	<?php if( isset($_GET["custom"]) && $_GET["custom"] == "proyect" ): ?>
 
 		<main role="main">
 			<!-- section -->
@@ -17,7 +17,7 @@
 					<div class="medium-7 columns small-12">
 						<div class="proyecto-category-content">
 							<?php
-									if( $_GET["cat"] ):
+									if( isset($_GET["cat"]) ):
 										$cat = $_GET["cat"];
 										$args_grilla_home = array(
 											'post_type' => 'proyect',
@@ -52,30 +52,9 @@
 												<?php $cat_proy_id = $cat_array[0]->term_id; ?>
 											</h2>
 											<div class="featured-img">
-												
-												<?php 
-												// echo $cat_proy_id;
-												if (function_exists('get_terms_meta'))
-													{ 
-														// echo "<br>entro!<br>";
-													    $metaValue = get_terms_meta($cat_proy_id,'productcategoryimg');
-													    $mValue = $metaValue[0];
-													    // echo $metaValue[0];
-													    // echo ($mValue);
-													    // get_terms_meta($cat_proy_id,'productcategoryimg');
-
-													    // $at = get_terms_meta($cat_proy_id,'addtext');
-
-													    // echo $at[0];
-
-													    // $img_p = get_terms_meta($cat_proy_id,'img');
-
-													    // echo $img_p[0];
-													}
-												?>
-												<img src="<?php echo ($mValue); ?>" alt="este tiene alt">
+												<img src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url(); ?>" alt="Imágen de la Categoría">
 											</div>
-											<!-- <?php // echo home_url(); ?>/wp-content/uploads/2014/09/Biodiversidad.jpg -->
+											
 											<div class="category-text">
 												<?php echo category_description(); ?>
 											</div>
@@ -163,7 +142,7 @@
 			<!-- /section -->
 		</main>
 
-	<?php elseif( $_GET["custom"] == "publication" ): ?>
+	<?php elseif( isset( $_GET["custom"] ) && $_GET["custom"] == "publication" ): ?>
 		<main role="main">
 		<!-- section -->
 
@@ -186,7 +165,7 @@
 							// 	// 'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 							// 	'posts_per_page' => '1000'
 							// );
-							if( $_GET["cat"] ):
+							if( isset($_GET["cat"]) ):
 								$cat = $_GET["cat"];
 								$args_grilla_home = array(
 									'post_type' => 'publication',
@@ -256,8 +235,8 @@
 										<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Descargar PDF</a>";
 										?>
 									<?php endif ?>
-									<?php if (get_post_meta(get_the_ID(), 'pdf-url' , true)): ?>
-										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver Lamina</a>";
+									<?php if (get_post_meta(get_the_ID(), 'ver-lamina' , true)): ?>
+										<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'ver-lamina' , true) ."'>Ver Lámina</a>";
 										?>	
 									<?php endif ?>
 									
@@ -350,8 +329,8 @@
 												<?php echo "<a class='btn-green pdf' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Descargar PDF</a>";
 												?>
 											<?php endif ?>
-											<?php if (get_post_meta(get_the_ID(), 'pdf-url' , true)): ?>
-												<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'pdf-url' , true) ."'>Ver Lamina</a>";
+											<?php if (get_post_meta(get_the_ID(), 'ver-lamina' , true)): ?>
+												<?php echo "<a class='btn-green lamina' target='_blank' href='". get_post_meta(get_the_ID(), 'ver-lamina' , true) ."'>Ver Lámina</a>";
 												?>	
 											<?php endif ?>
 											
@@ -384,7 +363,7 @@
 			<section class="loop-header">
 				<div class="row grey-tittle-row">
 					<div class="medium-12 columns small-12">
-						<h1 class="noticias-title"><?php _e( 'Noticias', 'html5blank' ); ?></h1>		
+						<h1 class="noticias-title"><?php _e( 'Categorías', 'html5blank' ); ?></h1>		
 					</div>
 				</div>
 			</section>
@@ -396,7 +375,7 @@
 						<h3><span><?php _e( 'Categoría: ', 'html5blank' ); ?></span><?php single_cat_title(); ?></h3>
 						<?php
 							$args_grilla_home = array(
-								'post_type' => ($_GET['post_type']) ? $_GET['post_type'] : 'post',
+								'post_type' => isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'post',
 								'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
 							);
 							$nuevo_query = new WP_query( $args_grilla_home );
