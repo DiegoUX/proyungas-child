@@ -212,9 +212,15 @@
 					</p>
 				</div>
 			<?php endwhile; ?>
+
 			<?php wp_reset_query(); ?>
 			<div class="row tar pag">
-				<?php get_template_part('pagination'); ?>	
+				<div class="custom-pagination">
+				 <?php 
+				 	wp_pagenavi( array( 'query' => $nuevo_query ) );
+					wp_reset_postdata();	// avoid errors further down the page
+				  ?>
+				</div>
 			</div>
 			
 			<!-- $wp_query = NULL;
@@ -317,10 +323,15 @@
 								
 							</div>
 						<?php endwhile; ?>
-						 
-						<?php wp_reset_query(); ?>
-						<?php get_template_part('pagination'); ?>
-						<!-- <?php wp_pagenavi(); ?> -->
+						<div class="row tar">
+							<div class="custom-pagination">
+							 <?php 
+							 	wp_pagenavi( array( 'query' => $nuevo_query ) );
+								wp_reset_postdata();	// avoid errors further down the page
+							  ?>
+							</div>
+						</div>
+
 					</div>
 					<div class="medium-5 small-12 columns">
 						

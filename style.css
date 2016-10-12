@@ -246,14 +246,17 @@ body .noticias-section .home-post-container .readmore-post{
 }
 
 .pagination .next.page-numbers,
-.pagination .prev.page-numbers {
+.pagination .prev.page-numbers,
+.custom-pagination .previouspostslink,
+.custom-pagination .nextpostslink {
     display: inline-block;
     /*overflow: hidden;*/
     width: 30px;
     vertical-align: middle;
 }
 
-.pagination .next.page-numbers:after {
+.pagination .next.page-numbers:after,
+.custom-pagination .nextpostslink:after {
     background: none repeat scroll 0 0 transparent;
     border: 0px solid #ccc;
     border-radius: 5px;
@@ -271,7 +274,8 @@ body .noticias-section .home-post-container .readmore-post{
     width: 30px;
 }
 
-.pagination .prev.page-numbers:after {
+.pagination .prev.page-numbers:after,
+.custom-pagination .previouspostslink:after {
     background: none repeat scroll 0 0 transparent;
     border: 0px solid #ccc;
     border-radius: 5px;
@@ -289,19 +293,25 @@ body .noticias-section .home-post-container .readmore-post{
     width: 30px;
 }
 
-.pagination .next.page-numbers {
+.pagination .next.page-numbers,
+.custom-pagination .nextpostslink {
   color: transparent !important;
   display: inline-block;
   position: relative;
 }
 
-.pagination .prev.page-numbers {
+.pagination .prev.page-numbers,
+.custom-pagination .previouspostslink {
   color: transparent !important;
   display: inline-block;
   position: relative;
 }
 
-.pagination .page-numbers {
+.pagination .page-numbers,
+.custom-pagination .page,
+.custom-pagination .current,
+.custom-pagination .previouspostslink,
+.custom-pagination .nextpostslink {
     background: none repeat scroll 0 0 #e8e6da;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -316,20 +326,22 @@ body .noticias-section .home-post-container .readmore-post{
     vertical-align: middle;
 }
 
-.page-numbers.current {
+.page-numbers.current,
+.custom-pagination .current {
     background: none repeat scroll 0 0 #36afa0;
     border: medium none #36afa0;
     color: #fff;
     padding-top: 8px;
 }
 
-a.page-numbers:hover {
+a.page-numbers:hover,
+.custom-pagination .page:hover {
     background: none repeat scroll 0 0 #ddd;
     color: #777 !important;
 }
 
 a.page-numbers.next:hover, a.page-numbers.prev:hover {
-    background: none repeat scroll 0 0 #ddd;
+  background: none repeat scroll 0 0 #ddd;
   color: transparent !important;
 }
 
@@ -337,7 +349,9 @@ a.page-numbers.next:hover, a.page-numbers.prev:hover {
     margin-left: 0;
 }
 
-.page-numbers {
+.page-numbers,
+.wp-pagenavi a,
+.wp-pagenavi span {
     margin-left: 3px;
 }
 

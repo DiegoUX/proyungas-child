@@ -14,12 +14,14 @@
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Source+Sans+Pro:300,600,700' rel='stylesheet' type='text/css'>
 		
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>-child/style.css">
+		<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>-child/style.css"> -->
+		<link rel="stylesheet" href="http://proyungas.loc/wp-content/themes/proyungas-child/style.css">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-		<link href="<?php echo get_template_directory_uri(); ?>-child/assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<!-- <link href="<?php echo get_template_directory_uri(); ?>-child/assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
+		<link href="http://proyungas.loc/wp-content/themes/proyungas-child/assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 		<link href="<?php echo get_template_directory_uri(); ?>-child/foundation-5.3.3/css/foundation.min.css" rel="stylesheet" type="text/css" />
 		
