@@ -40,7 +40,7 @@
 								<div class="office column large-6 medium-12">
 									<h6>Buenos Aires</h6>
 									<span class="telefono">Tel/Fax: 54-11-21739104</span>
-									<a href="mailto:avelina@proyungas.org.ar" class="mail">avelina@proyungas.org.ar</a>
+									<a href="mailto:avelina@productoyungas.org.ar" class="mail">avelina@productoyungas.org.ar</a>
 								</div>
 							</div>
 						</div>
