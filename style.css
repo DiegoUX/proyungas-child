@@ -2585,11 +2585,12 @@ section.Equipo + section .team .feat-img {
 }
 
 .header .hide-for-small .logo {
-  margin-top: 32px!important;
+  margin-top: 23px!important;
 }
 
 .header .hide-for-small .logo img {
-  width: 70%;
+  width: 120px;
+  height: auto;
 }
 
 .header-right-col {

